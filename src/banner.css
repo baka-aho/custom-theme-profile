@@ -5,11 +5,9 @@
 }
 
 .banner__68edb {
-    background: var(--banner-image) !important;
+    background: var(--banner-image);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-    height: 105px;
-    min-height: 105px;
 }
