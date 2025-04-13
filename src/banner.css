@@ -1,5 +1,5 @@
 .banner__68edb {
-    background: var(--banner-image, url("https://raw.githubusercontent.com/DTACat/Custom-Effects-And-Decorations-Discord-Theme/main/Images/Frame%2013.png")) !important;
+    background: var(--banner-image) !important;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
