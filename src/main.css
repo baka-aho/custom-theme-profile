@@ -20,6 +20,12 @@
     initial-value: none;
 }
 
+@property --custom-badge-image {
+    syntax: "<image> | none";
+    inherits: true;
+    initial-value: none;
+}
+
 
 img[class^="avatarDecoration"],
 :not([class*="shopCard"],[class*="avatarContainer"],[class*="avatarPreviewContainer"]) > * > *[class^="avatarDecoration"] img {
@@ -33,7 +39,7 @@ img[class^="avatarDecoration"],
     display: inline-block;
     width: 24px;
     height: 24px;
-    background-image: var(--custom-badge-image, url("https://example.com/custom-badge.png"));
+    background-image: var(--custom-badge-image);
     background-size: cover;
     margin-left: 4px;
     vertical-align: middle;
