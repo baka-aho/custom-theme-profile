@@ -40,7 +40,11 @@
 }
 
 [class^="profileEffects"] {
-    display: revert;
+	display: none;
+}
+
+[class^="profileEffectShopPreview"] [class^="profileEffects"] {
+	display: revert;
 }
 
 /* Avatar Decoration */
@@ -64,9 +68,4 @@
 
 .badge__8061a {
     filter: drop-shadow(0 0 3px rgba(255, 107, 107, 0.5));
-}
-
-/* Gradient Body */
-.body__5be3e {
-    background: var(--profile-body-background-color, linear-gradient(to bottom, rgba(255, 227, 204, 0.5), rgba(255, 107, 107, 0.3))) !important;
 }
