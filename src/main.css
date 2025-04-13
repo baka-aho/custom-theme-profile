@@ -1,60 +1,72 @@
 /**
  * @name Custom Profile Effect
  * @author DTACat, WNTIV
- * @version 2.0.0
- * @description Displays A Custom Profile Effect.
+ * @version 2.1.0
+ * @description Displays custom profile effects, animations, badges, and gradients.
  * @source https://github.com/DTACat/Custom-Profile-Effects-Discord-Theme
  * @website https://sites.google.com/view/goofytests/home-page
  * @invite 7SBn9qzwxC
  */
 
 @property --profile-effect-image {
-	syntax: "<image> | none";
-	inherits: true;
-	/*Profile Effect*/
-	initial-value: url(" ");
+    syntax: "<image> | none";
+    inherits: true;
+    initial-value: none;
 }
 
 @property --avatar-decoration-image {
-	syntax: "<image> | none";
-	inherits: true;
-	/*Avatar Decoration*/
-	initial-value: url(" ");
+    syntax: "<image> | none";
+    inherits: true;
+    initial-value: none;
+}
+
+/* Profile Effect */
+.inner_c0bea0::after {
+    content: "";
+    background: var(--profile-effect-image);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.inner_c0bea0:hover::after {
+    opacity: 0.35;
 }
 
 [class^="profileEffects"] {
-	display: none;
+    display: revert;
 }
 
-[class^="profileEffectShopPreview"] [class^="profileEffects"] {
-	display: revert;
+/* Avatar Decoration */
+.avatarDecoration__44b0c img {
+    background-image: var(--avatar-decoration-image);
+    background-size: cover;
+    object-fit: cover;
 }
 
-[class*="userProfileInner"]::after {
-	content: "";
-	background: var(--profile-effect-image);
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	pointer-events:none;
-	z-index: 1;
-	opacity: 1;
-	transition: opacity 0.6s ease-in-out;
+/* Custom Badge */
+.container__8061a::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: var(--custom-badge-image, url("https://example.com/custom-badge.png"));
+    background-size: cover;
+    margin-left: 4px;
+    vertical-align: middle;
 }
 
-[class*="userProfileInner"]:hover::after {
-	opacity: 0.35;
+.badge__8061a {
+    filter: drop-shadow(0 0 3px rgba(255, 107, 107, 0.5));
 }
 
-[class*="userProfileModalInner"]::after, [class*="userPopoutInner"]::after {
-	margin: -4px;
-}
-
-img[class^="avatarDecoration"],
-:not([class*="shopCard"],[class*="avatarContainer"],[class*="avatarPreviewContainer"]) > * > *[class^="avatarDecoration"] img {
-	object-position: 9999px;
-	background-image: var(--avatar-decoration-image);
-	background-size: cover;
+/* Gradient Body */
+.body__5be3e {
+    background: var(--profile-body-background-color, linear-gradient(to bottom, rgba(255, 227, 204, 0.5), rgba(255, 107, 107, 0.3))) !important;
 }
