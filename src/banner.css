@@ -1,3 +1,9 @@
+@property --banner-image {
+    syntax: "<image> | none";
+    inherits: true;
+    initial-value: none;
+}
+
 .banner__68edb {
     background: var(--banner-image) !important;
     background-size: contain;
