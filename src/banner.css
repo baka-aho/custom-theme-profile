@@ -1,13 +1,10 @@
-.artContainer__394fc {
-  background-image: url(https://raw.githubusercontent.com/DTACat/Custom-Effects-And-Decorations-Discord-Theme/main/Images/Frame%2013.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  margin-top: -20px;
-  margin-left: -10px;
-}
-.art__23b36 {
-    display: none;
-}
-.ctaButton__0d23d {
-    display: none;
+.banner__68edb {
+    background: linear-gradient(to bottom, rgba(255, 107, 107, 0.8), rgba(78, 205, 196, 0.8)), 
+                var(--banner-image, url("https://raw.githubusercontent.com/DTACat/Custom-Effects-And-Decorations-Discord-Theme/main/Images/Frame%2013.png")) !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    height: 105px;
+    min-height: 105px;
 }
